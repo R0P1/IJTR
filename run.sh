@@ -10,10 +10,15 @@ instal(){
 
 nanya(){
     read -p "Apakah anda mau menginstal John The Ripper [iya/tidak]: " nanya
-
     if [[ ${nanya} == "iya" ]]; then
         instal
         exit 0
+    elif [[ ${nanya} == "tidak" ]]; then
+        exit 0
     else
-        exit 1
+        echo "Kesalahan: masukkan salah."
+        nanya
+    fi
 }
+
+nanya
