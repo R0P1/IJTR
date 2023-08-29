@@ -9,7 +9,7 @@ instal(){
     cd john/src
     ./configure && make -s clean && make -sj4
     export PATH=$PATH:${path}
-    echo "[+] Selesai."
+    echo "Selesai."
 }
 
 nanya(){
@@ -21,8 +21,16 @@ nanya(){
         exit 0
     else
         echo "Kesalahan: masukkan salah."
-        nanya
+        exit 1 
     fi
 }
 
-nanya
+cek_root(){
+    if [ $UID -eq 0 ]; then
+        nanya
+    else
+        echo "Jalankan sebagai root."
+    fi
+}
+
+cek_root
