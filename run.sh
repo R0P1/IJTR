@@ -2,7 +2,7 @@
 # Instal John The Ripper
 
 instal(){
-    path="/root/instal-john-the-ripper/john/run"
+    path="/root//john/run"
     cd /root
     apt update
     apt-get install build-essential libssl-dev zlib1g-dev yasm pkg-config libgmp-dev libpcap-dev libbz2-dev
