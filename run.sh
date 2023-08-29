@@ -9,7 +9,6 @@ instal(){
     git clone https://github.com/openwall/john.git
     cd john/src
     ./configure && make -s clean && make -sj4
-    export PATH=$PATH:${path}
     echo "Selesai."
 }
 
