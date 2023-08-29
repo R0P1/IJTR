@@ -1,11 +1,15 @@
 # Instal John The Ripper
 
 instal(){
+    path="/root/instal-john-the-ripper/john/run"
+    cd /root
     sudo apt update
-    sudo apt install build-essential libssl-dev yasm pkg-config
+    sudo apt-get install build-essential libssl-dev zlib1g-dev yasm pkg-config libgmp-dev libpcap-dev libbz2-dev
     git clone https://github.com/openwall/john.git
-    cd john
+    cd john/src
     ./configure && make -s clean && make -sj4
+    export PATH=$PATH:${path}
+    echo "[+] Selesai."
 }
 
 nanya(){
