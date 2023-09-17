@@ -10,6 +10,9 @@ instal(){
         git clone https://github.com/openwall/john.git
         cd john/src
         ./configure && make -s clean && make -sj4
+        echo "export PATH=$PATH:/usr/share/john/run/" >> "~/.bashrc"
+        echo "alias john='/usr/share/john/run/john'" >> "~/.bashrc"
+        source ~/.bashrc
         echo "[+] Selesai."
     else
         echo "[!] Kesalahan: direktori ${dir} tidak ada."
