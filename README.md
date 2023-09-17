@@ -9,4 +9,5 @@ $ git clone https://github.com/R0P1/ijtr
 $ ijtr
 $ cmod +x instal.sh
 $ ./instal.sh
+$ alias john="/usr/share/john/run/john"
 </pre>
